@@ -1,10 +1,18 @@
-h1, h2 {
-    color: purple;
+h1 {
+    color: darkred;
+    text-align: center;
+  }
+  
+  h2 {
+    color: darkgreen;
     text-align: center;
   }
   p {
-    color: black;
+    color: white;
     text-align: center;
+    text-shadow: red 1px 1px 0px;
+    background-color: black;
+    padding: 5px;
   }
   ul {
     border: 2px solid orange;
@@ -15,13 +23,10 @@ h1, h2 {
   ol, ul {
     padding: 5px 20px;
     border-radius: 4px;
-    border-color: red;
+    border-color: black;
   }
-  h1, strong {
-    color: green;
-  }
-  em {
-    color: gray;
-    border: solid 1px;
-    border-radius: 5px;
+  em, strong {
+    color: red;
+    font-size: 20px;
+    text-shadow: white 1px 1px 1px;
   }
