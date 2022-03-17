@@ -1,16 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Ubuntu:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Hubballi&family=Ubuntu:wght@300;400&display=swap');
+  
   body {
     background-color: rgba(4, 0, 255, 0.425);
   }
 
   h1 {
     color: rgb(0, 0, 0);
-    text-align: center;
+    font-family: 'Bitter', serif;
+    font-weight: bolder;
     font-size: 350%;
+  }
 
+  h2{
+    margin-top: 40px;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  .font-me { 
+    font-family: 'Hubballi', cursive;
   }
 
   li {
     padding-bottom: 10px;
+  }
+
+  ol, ul {
+    font-size: larger;
+  }
+
+  p {
+    font-size: larger;
   }
 
   em, strong {
@@ -35,7 +56,7 @@
     width: 100vw;
     height: 100vh;
     grid-template-columns: 2fr 4fr 2fr;
-    grid-template-rows: 1fr 0.2fr 3fr 1fr;
+    grid-template-rows: 1fr 0fr 0fr 1fr;
     grid-template-areas: 
     "top top top"
     "nav nav nav"
@@ -44,11 +65,15 @@
   }
 
   .top {
+    background-color: rgba(255, 0, 234, 0.397);
     grid-area: top;
+    display: flex;
+    justify-content: center;
     border: black solid 2px;
   }
 
   .bottom {
+    background-color: rgba(166, 96, 206, 0.795);
     grid-area: bottom;
     height: fit-content;
     border-bottom: black solid 2px;
@@ -60,7 +85,7 @@
     background-color: rgba(184, 0, 0, 0.596);
     display: grid;
     justify-content: center;
-    height: fit-content;
+    height: max-content;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-area: nav;
     border-left: black solid 2px;
@@ -81,15 +106,21 @@
   }
 
   button a {
+    font-family: 'Bitter', serif;
     display: flex;
     justify-content: center;
     margin: 0;
     border-radius: 3px;
-    border: white groove 1px;
     color: whitesmoke;
     font-size: 200%;
     text-shadow: black 2px 1px 0px;
+    text-decoration: none;
   }
+
+  .navbutton:hover {
+    background-color: rgb(160, 156, 156);
+  }
+
   .mid {
     padding-left: 8px;
     padding-right: 8px;
@@ -149,13 +180,17 @@
     grid-area: row-desc;
   }
 
+  .row-desc p {
+    padding-bottom: 10px;
+  }
+
   .row-subhead {
-    text-align: center;
+    text-align: left;
     grid-area: row-subhead;
   }
 
   .row-subhead1 {
-    text-align: center;
+    text-align: left;
     grid-area: row-subhead1;
   }
 
@@ -165,11 +200,15 @@
   }
 
   .row-content p{
-    text-align: center;
+    margin-left: 3%;
+    margin-right: 3%;
+    text-align: left;
   }
 
   .row-content1 {
-    text-align: center;
+    margin-left: 3%;
+    margin-right: 3%;
+    text-align: left;
     grid-area: row-content1;
   }
 
@@ -180,7 +219,11 @@
   .top, .bottom {
     text-align: center;
     padding: 8px;
-    background-color: rgba(255, 0, 234, 0.336);
+  }
+
+  h3 {
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 8%;
   }
 
 @media screen
@@ -202,6 +245,22 @@ and (max-width: 900px)  {
   .left {
     border-right: black solid 2px;
   }
+  .row-subhead1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .row-desc {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .row-head {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .row-subhead {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 @media screen
@@ -211,14 +270,19 @@ and (max-width: 640px)  {
     grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr;
     grid-template-areas: 
     "top"
-    "nav"
     "middle"
     "left"
     "right"
+    "nav"
     "bottom";
   }
 
+  .nav {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .mid {
+    border-top: none;
     border-bottom: none;
   }
 
@@ -228,5 +292,42 @@ and (max-width: 640px)  {
   }
   .right {
     border-left: black solid 2px;
+  }
+  .row-subhead1 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .row-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .row-content1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .row-desc {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .row-subhead {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .row-head {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  button a {
+    display: block;
+    flex-flow: column nowrap;
+  }
+
+  .font-me {
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
   }
 }
