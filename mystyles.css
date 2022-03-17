@@ -35,7 +35,7 @@
     width: 100vw;
     height: 100vh;
     grid-template-columns: 2fr 4fr 2fr;
-    grid-template-rows: 1fr 1fr 4fr 1fr;
+    grid-template-rows: 1fr 0.4fr 4fr 1fr;
     grid-template-areas: 
     "top top top"
     "nav nav nav"
@@ -58,27 +58,33 @@
   .nav {
     background-color: rgba(184, 0, 0, 0.596);
     display: grid;
+    justify-content: center;
+    height: fit-content;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-area: nav;
-    grid-template-areas: "button button button button";
     border-left: black solid 2px;
     border-right: black solid 2px;
     padding: 1%;
   }
 
-  .nav button {
-    display: button;
+  
+  .navbutton {
+    display: block;
+    height: fit-content;
     border-radius: 3px;
     background-color: rgb(77, 77, 77);
     box-shadow: 4px 3px 5px;
-    margin: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin: 2%;
+    
 
   }
 
   button a {
     display: flex;
-    height: auto;
     justify-content: center;
+    margin: 0;
     padding: 5px;
     padding-left: 15%;
     padding-right: 15%;
