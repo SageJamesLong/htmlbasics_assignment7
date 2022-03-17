@@ -35,7 +35,7 @@
     width: 100vw;
     height: 100vh;
     grid-template-columns: 2fr 4fr 2fr;
-    grid-template-rows: 1fr 0.4fr 4fr 1fr;
+    grid-template-rows: 1fr 0.2fr 3fr 1fr;
     grid-template-areas: 
     "top top top"
     "nav nav nav"
@@ -50,6 +50,7 @@
 
   .bottom {
     grid-area: bottom;
+    height: fit-content;
     border-bottom: black solid 2px;
     border-right: black solid 2px;
     border-left: black solid 2px;
@@ -74,8 +75,6 @@
     border-radius: 3px;
     background-color: rgb(77, 77, 77);
     box-shadow: 4px 3px 5px;
-    margin-top: auto;
-    margin-bottom: auto;
     margin: 2%;
     
 
@@ -85,10 +84,7 @@
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: 5px;
-    padding-left: 15%;
-    padding-right: 15%;
-    border-radius: 5px;
+    border-radius: 3px;
     border: white groove 1px;
     color: whitesmoke;
     font-size: 200%;
@@ -165,6 +161,11 @@
 
   .row-content {
     grid-area: row-content;
+    grid-area: row-content;
+  }
+
+  .row-content p{
+    text-align: center;
   }
 
   .row-content1 {
@@ -195,6 +196,9 @@ and (max-width: 900px)  {
     "left right"
     "bottom bottom";
   }
+  .mid {
+    border-bottom: none;
+  }
   .left {
     border-right: black solid 2px;
   }
@@ -213,7 +217,13 @@ and (max-width: 640px)  {
     "right"
     "bottom";
   }
+
+  .mid {
+    border-bottom: none;
+  }
+
   .left {
+    border-bottom: none;
     border-right: black solid 2px;
   }
   .right {
