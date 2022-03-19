@@ -67,8 +67,6 @@
   .top {
     background-color: rgba(255, 0, 234, 0.397);
     grid-area: top;
-    display: flex;
-    justify-content: center;
     border: black solid 2px;
   }
 
@@ -81,7 +79,7 @@
     border-left: black solid 2px;
   }
 
-  .nav {
+  nav {
     background-color: rgba(184, 0, 0, 0.596);
     display: grid;
     justify-content: center;
@@ -93,15 +91,16 @@
     padding: 1%;
   }
 
+
   
   .navbutton {
-    display: block;
-    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+    border: black solid 2px;
     border-radius: 3px;
     background-color: rgb(77, 77, 77);
     box-shadow: 4px 3px 5px;
-    margin: 2%;
-    
 
   }
 
@@ -277,7 +276,7 @@ and (max-width: 640px)  {
     "bottom";
   }
 
-  .nav {
+  nav {
     grid-template-columns: 1fr 1fr;
   }
 
